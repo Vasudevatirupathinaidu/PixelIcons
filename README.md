@@ -1,6 +1,6 @@
-# PixelIcons
+# Pixel Icons
 
-PixelIcons is my version of the Raycast icon maker. This project allows users to customize icons with options for background color, size, and other functionalities. With a focus on delivering a great UI, PixelIcons offers an intuitive and user-friendly experience for icon personalization. I've added a couple of features that are not part of the Raycast Icon Maker. You can refer to them in the features section.
+Pixel Icons is my version of the Raycast icon maker. This project allows users to customize icons with options for background color, size, and other functionalities. With a focus on delivering a great UI, Pixel Icons offers an intuitive and user-friendly experience for icon personalization. I've added a couple of features that are not part of the Raycast icon maker. You can refer to them in the features section.
 
 - ReactJs, CSS, Vite (Frontend tooling), Figma (Design tool).
 
@@ -16,7 +16,7 @@ PixelIcons is my version of the Raycast icon maker. This project allows users to
 
 ## Features
 
-1. PixelIcons web app contains three sections:
+1. Pixel Icons web app contains three sections:
 
    - Icon Panel: For icons, random preset color generation, and random icon selection.
 
