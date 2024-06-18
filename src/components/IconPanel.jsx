@@ -10,6 +10,15 @@ export default function IconPanel({
   selectIconType,
   setSelectIconType,
   fillStyles,
+  fillStyles: {
+    fillType,
+    primaryClr,
+    secondaryClr,
+    clrAngle,
+    clrPosition,
+    clrSpread,
+    clr,
+  },
   isIconPanelOpen,
 
   presetBgColors,
@@ -55,6 +64,52 @@ export default function IconPanel({
         secondaryClr: presetBgColors[randomSelectedColorId][1],
       },
     });
+  }
+
+  // Background color for random preset color generation and icons
+  /* let customStyle;
+  if (fillType === "linear" || fillType === "radial") {
+    customStyle = {
+      background: `linear-gradient(45deg, ${fillStyles.primaryClr} 10%, ${fillStyles.secondaryClr} 80%)`,
+      border: "2px solid #ffffff",
+      color: "#ffffff",
+    };
+  } else {
+    customStyle = {
+      background: `${clr}`,
+      border: "2px solid #ffffff",
+      color: "#ffffff",
+    };
+  } */
+
+  let customStyle;
+
+  if (fillType === "radial") {
+    if (clrPosition !== "center") {
+      customStyle = {
+        background: `linear-gradient(to ${clrPosition}, ${primaryClr} ${clrSpread}%, ${secondaryClr} 90%)`,
+        border: "2px solid #ffffff",
+        color: "#ffffff",
+      };
+    } else {
+      customStyle = {
+        background: `radial-gradient(circle at center, ${primaryClr} ${clrSpread}%, ${secondaryClr} 90%)`,
+        border: "2px solid #ffffff",
+        color: "#ffffff",
+      };
+    }
+  } else if (fillType === "linear") {
+    customStyle = {
+      background: `linear-gradient(${clrAngle}deg, ${primaryClr} 10%, ${secondaryClr} 90%)`,
+      border: "2px solid #ffffff",
+      color: "#ffffff",
+    };
+  } else {
+    customStyle = {
+      background: `${clr}`,
+      border: "2px solid #ffffff",
+      color: "#ffffff",
+    };
   }
 
   return (
@@ -116,11 +171,7 @@ export default function IconPanel({
 
         <button
           className="random-color"
-          style={{
-            background: `linear-gradient(45deg, ${fillStyles.primaryClr} 10%, ${fillStyles.secondaryClr} 80%)`,
-            border: "2px solid #ffffff",
-            color: "#ffffff",
-          }}
+          style={customStyle}
           onClick={handleRandomColorGenerator}
         >
           <svg
@@ -175,7 +226,7 @@ export default function IconPanel({
               style={{
                 background:
                   hoveredIcon === id || selectedIconId === id
-                    ? `linear-gradient(45deg, ${fillStyles.primaryClr} 10%, ${fillStyles.secondaryClr} 80%)`
+                    ? customStyle.background
                     : "",
                 border: selectedIconId === id ? "1px solid #ffffff" : "",
               }}
