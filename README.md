@@ -2,7 +2,7 @@
 
 Pixel Icons is my version of the Raycast icon maker. This project allows users to customize icons with options for background color, size, and other functionalities. With a focus on delivering a great UI, Pixel Icons offers an intuitive and user-friendly experience for icon personalization. I've added a couple of features that are not part of the Raycast icon maker. You can refer to them in the features section.
 
-- ReactJs, CSS, Vite (Frontend tooling), Figma (Design tool).
+- React.js, CSS, Vite (Frontend tooling), Figma (Design tool) and Netlify (Hosting).
 
 ## Demo
 
