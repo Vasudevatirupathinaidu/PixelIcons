@@ -3,7 +3,7 @@ export default function Connect() {
   return (
     <div className="contact">
       <a
-        href="https://github.com/Vasudevatirupathinaidu"
+        href="https://github.com/Vasudevatirupathinaidu/PixelIcons"
         target="_blank"
         rel="noopener noreferrer"
       >
